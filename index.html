@@ -166,6 +166,21 @@ a.btn[href="#comprar"]{border-radius:999px}
   transform-origin:center center;
 }
 @media(max-width:760px){.hero::before{opacity:.05;transform:scale(.82);background-position:center center}}
+
+/* Fotografia quase imperceptível e fusão suave com o fundo preto */
+.hero::before{
+  opacity:.03;
+  transform:scale(.82);
+  -webkit-mask-image:radial-gradient(ellipse 65% 70% at 50% 50%,#000 25%,transparent 100%);
+  mask-image:radial-gradient(ellipse 65% 70% at 50% 50%,#000 25%,transparent 100%);
+}
+@media(max-width:760px){
+  .hero::before{
+    opacity:.03;
+    -webkit-mask-image:radial-gradient(ellipse 80% 65% at 50% 50%,#000 20%,transparent 100%);
+    mask-image:radial-gradient(ellipse 80% 65% at 50% 50%,#000 20%,transparent 100%);
+  }
+}
 </style>
 </head>
 <body>
