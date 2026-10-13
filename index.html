@@ -78,6 +78,23 @@ a.btn[href="#comprar"]{border-radius:999px}
 .hero .lead{max-width:730px}
 .hero .btn{margin-left:auto;margin-right:auto}
 @media(max-width:760px){.hero-grid{display:flex;flex-direction:column;align-items:center}.hero-copy{width:100%}}
+
+/* Layout editorial centralizado em toda a página */
+.section>.wrap,.final>.wrap{display:flex;flex-direction:column;align-items:center;text-align:center}
+.section .eyebrow,.section h2,.section .intro,.final h2,.final p{margin-left:auto;margin-right:auto;text-align:center}
+.section .intro{max-width:740px}
+.pain-grid,.learn-grid,.bonus-grid{width:100%}
+.tile,.bonus{text-align:center;display:flex;flex-direction:column;align-items:center}
+.tile h3,.tile p,.bonus h3,.bonus p,.bonus .tag,.num{text-align:center}
+.quote{border-left:0;border-top:4px solid var(--red);padding:26px 10px 0;margin-left:auto;margin-right:auto;text-align:center}
+.offer{width:100%;text-align:center;justify-items:center;align-items:center}
+.offer>*,.pricebox{text-align:center}
+.faq{width:100%;max-width:850px;margin-inline:auto}
+.faq summary,.faq details{text-align:center}
+.trust-grid>div{text-align:center;border-left:0;border-top:3px solid #e5092d;padding:15px 12px}
+.footer,.footer .wrap{text-align:center}
+@media(max-width:760px){.section>.wrap,.final>.wrap{text-align:center}.tile,.bonus,.offer{text-align:center}.pain-grid,.learn-grid,.bonus-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
