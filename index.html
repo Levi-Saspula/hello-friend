@@ -128,6 +128,27 @@ a.btn[href="#comprar"]{border-radius:999px}
 
 /* Espaçamento subtil entre letras da frase 2 */
 .hero h1 .hero-montserrat{letter-spacing:.005em}
+
+/* Reflexo luminoso que atravessa as frases 2 e 3 */
+@keyframes titleLightSweep{
+  0%,12%{background-position:130% 50%}
+  55%,100%{background-position:-130% 50%}
+}
+@media(prefers-reduced-motion:no-preference){
+  .hero h1 .hero-montserrat,
+  .hero h1 em{
+    background-image:linear-gradient(105deg,currentColor 0%,currentColor 37%,#ffffff 49%,currentColor 61%,currentColor 100%);
+    background-size:250% 100%;
+    background-position:130% 50%;
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:titleLightSweep 5s ease-in-out infinite;
+  }
+  .hero h1 .hero-montserrat{color:#fff;animation-delay:0s}
+  .hero h1 em{color:#e5092d;animation-delay:.16s}
+}
+
 </style>
 </head>
 <body>
