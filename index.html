@@ -156,6 +156,16 @@ a.btn[href="#comprar"]{border-radius:999px}
 .hero::after{z-index:0;pointer-events:none}
 .hero>.wrap{position:relative;z-index:1}
 @media(max-width:760px){.hero::before{background-position:center 30%}}
+
+/* Fundo mais distante e discreto: imagem com 5% de opacidade */
+.hero::before{
+  opacity:.05;
+  background-size:cover;
+  background-position:center center;
+  transform:scale(.82);
+  transform-origin:center center;
+}
+@media(max-width:760px){.hero::before{opacity:.05;transform:scale(.82);background-position:center center}}
 </style>
 </head>
 <body>
