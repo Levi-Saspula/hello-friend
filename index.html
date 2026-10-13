@@ -149,6 +149,13 @@ a.btn[href="#comprar"]{border-radius:999px}
   .hero h1 em{color:#e5092d;animation-delay:.16s}
 }
 
+
+/* Retrato de mulher negra triste ao fundo do cabeçalho, a 30% de opacidade */
+.hero{position:relative;isolation:isolate;background:#090909;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background-image:url("https://images.pexels.com/photos/6382735/pexels-photo-6382735.jpeg");background-position:center 35%;background-size:cover;background-repeat:no-repeat;opacity:.30;pointer-events:none}
+.hero::after{z-index:0;pointer-events:none}
+.hero>.wrap{position:relative;z-index:1}
+@media(max-width:760px){.hero::before{background-position:center 30%}}
 </style>
 </head>
 <body>
