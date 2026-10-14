@@ -384,6 +384,15 @@ body{background-color:#080808;background-image:radial-gradient(ellipse at 8% 18%
 .pricebox .price{font-size:clamp(36px,4vw,48px);color:#fff;margin:7px 0 10px;white-space:nowrap}
 .pricebox .price-note{font-size:12px;color:#ff526b;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
 
+
+/* Cronómetro da oferta promocional */
+.offer-countdown{margin:18px auto 4px;padding:14px 12px;width:min(100%,270px);border:1px solid rgba(229,9,45,.55);background:linear-gradient(145deg,rgba(229,9,45,.12),rgba(0,0,0,.25));text-align:center}
+.countdown-label{display:block;color:#d8d8d8;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.countdown-clock{display:block;margin:3px 0;color:#ff2345;font-family:"Montserrat",Arial,sans-serif;font-size:34px;font-weight:800;line-height:1.2;font-variant-numeric:tabular-nums;letter-spacing:.06em;text-shadow:0 0 16px rgba(229,9,45,.18)}
+.countdown-footnote{display:block;color:#aaa;font-size:10px;line-height:1.5}
+.offer-countdown.is-expired{border-color:#555;background:#171717}
+.offer-countdown.is-expired .countdown-clock{color:#bbb;text-shadow:none}
+
 </style>
 </head>
 <body>
@@ -394,7 +403,12 @@ body{background-color:#080808;background-image:radial-gradient(ellipse at 8% 18%
 
 <section class="section"><div class="wrap"><div class="eyebrow">Materiais extra incluídos</div><h2>Quatro bónus para consultar quando precisares.</h2><div class="bonus-grid"><div class="bonus"><div class="tag">Bónus 01</div><h3>25 Frases Prontas para Desarmar Manipulações</h3><p>Respostas curtas para situações de culpa, provocação, acusações e conversas que não avançam.</p></div><div class="bonus"><div class="tag">Bónus 02</div><h3>Manual Prático para Impor Limites</h3><p>Um roteiro em sete passos para definir, comunicar e manter limites consistentes.</p></div><div class="bonus"><div class="tag">Bónus 03</div><h3>Mais de 50 Sinais de Padrões Manipuladores</h3><p>Uma lista organizada de comportamentos para observar padrões recorrentes com mais clareza.</p></div><div class="bonus"><div class="tag">Bónus 04</div><h3>Plano de Distanciamento Emocional e Prático</h3><p>Um plano por fases para pensar no afastamento com organização, apoio e atenção à segurança.</p></div></div></div></section>
 <section class="section light"><div class="wrap"><h2>Este guia pode ser útil para ti se…</h2><div class="pain-grid"><div class="tile"><h3>Queres compreender melhor uma relação</h3><p>Seja amorosa, familiar, de amizade ou profissional, quando certos padrões se repetem.</p></div><div class="tile"><h3>Tens dificuldade em dizer “não”</h3><p>E sentes culpa ou pressão quando tentas proteger o teu tempo e as tuas decisões.</p></div><div class="tile"><h3>Queres comunicar com mais firmeza</h3><p>Sem insultar, ameaçar ou tentar vencer todas as discussões.</p></div><div class="tile"><h3>Estás pronto para observar padrões</h3><p>Com mais atenção aos comportamentos e menos pressa em tirar conclusões.</p></div></div><p class="intro" style="margin-top:24px"><strong>Importante:</strong> o guia usa “narcisista” em sentido comportamental, não como diagnóstico clínico. Não promete mudar outra pessoa; oferece ferramentas para reconhecer padrões, definir limites e tomar decisões mais conscientes.</p></div></section>
-<section class="section" id="comprar"><div class="wrap"><div class="eyebrow">O próximo passo começa contigo</div><h2>Começa por recuperar a confiança na tua própria percepção.</h2><p class="intro">Recebe o ebook principal e os quatro bónus práticos num único conjunto digital.</p><div class="offer"><div><h3>O que está incluído</h3><ul><li>Ebook em PDF com 9 capítulos</li><li>25 frases prontas para situações difíceis</li><li>Manual prático para impor limites</li><li>Lista com mais de 50 sinais</li><li>Plano de distanciamento emocional e prático</li></ul></div><div class="pricebox"><div class="eyebrow">Acesso ao guia completo</div><div class="price-was">Antes: <s>17.500 Kz</s></div><div class="price">5.000 Kz</div><div class="price-note">Oferta por tempo limitado</div><a class="btn buy-link" href="https://wa.me/244000000000?text=Ol%C3%A1%2C%20quero%20saber%20como%20comprar%20o%20ebook%20Como%20Lidar%20com%20Pessoas%20Narcisistas" target="_blank" rel="noopener">QUERO O MEU EBOOK ↗</a><div class="small">Substitui o contacto e confirma as condições de pagamento e entrega antes de publicar.</div></div></div></div></section>
+<section class="section" id="comprar"><div class="wrap"><div class="eyebrow">O próximo passo começa contigo</div><h2>Começa por recuperar a confiança na tua própria percepção.</h2><p class="intro">Recebe o ebook principal e os quatro bónus práticos num único conjunto digital.</p><div class="offer"><div><h3>O que está incluído</h3><ul><li>Ebook em PDF com 9 capítulos</li><li>25 frases prontas para situações difíceis</li><li>Manual prático para impor limites</li><li>Lista com mais de 50 sinais</li><li>Plano de distanciamento emocional e prático</li></ul></div><div class="pricebox"><div class="eyebrow">Acesso ao guia completo</div><div class="price-was">Antes: <s>17.500 Kz</s></div><div class="price">5.000 Kz</div><div class="price-note">Oferta por tempo limitado</div>
+<div class="offer-countdown" role="timer" aria-live="polite" aria-label="Tempo restante da oferta">
+  <span class="countdown-label">Esta oferta termina em</span>
+  <span class="countdown-clock" id="offer-countdown">17:00</span>
+  <span class="countdown-footnote" id="countdown-message">Aproveita enquanto está disponível.</span>
+</div><a class="btn buy-link" href="https://wa.me/244000000000?text=Ol%C3%A1%2C%20quero%20saber%20como%20comprar%20o%20ebook%20Como%20Lidar%20com%20Pessoas%20Narcisistas" target="_blank" rel="noopener">QUERO O MEU EBOOK ↗</a><div class="small">Substitui o contacto e confirma as condições de pagamento e entrega antes de publicar.</div></div></div></div></section>
 <section class="section"><div class="wrap"><h2 style="text-align:center">Perguntas frequentes</h2><div class="faq"><details><summary>Como recebo o ebook?</summary><p>Define aqui o teu processo de entrega: por WhatsApp, email ou link de download após confirmação do pagamento.</p></details><details><summary>Posso ler no telemóvel?</summary><p>Sim. O ficheiro PDF pode ser aberto num telemóvel, tablet ou computador.</p></details><details><summary>Preciso de conhecimentos de psicologia?</summary><p>Não. O guia foi organizado com exemplos, frases e exercícios práticos.</p></details><details><summary>Serve apenas para relações amorosas?</summary><p>Não. As ferramentas podem ajudar a refletir sobre diferentes relações; a sua aplicação depende do contexto.</p></details><details><summary>O ebook vai fazer a outra pessoa mudar?</summary><p>Não existe essa garantia. O foco está nas tuas respostas, limites e decisões.</p></details><details><summary>E se houver violência ou ameaça?</summary><p>A segurança deve vir primeiro. Procura apoio profissional, jurídico e uma rede de segurança. Um ebook não substitui ajuda especializada ou serviços de emergência.</p></details></div></div></section>
 <section class="final"><div class="wrap"><h2>A tua paz não precisa da autorização de outra pessoa.</h2><p>Não tens de resolver tudo hoje. Começa por compreender os padrões, reconhecer os teus limites e dar um passo de cada vez.</p><a class="btn buy-link" href="#comprar">QUERO CONHECER O GUIA</a></div></section>
 <footer class="footer"><div class="wrap">Como Lidar com Pessoas Narcisistas · Guia prático em PDF<br>Conteúdo educativo. Não substitui aconselhamento psicológico, jurídico ou apoio de emergência.</div></footer>
@@ -442,4 +456,37 @@ body{background-color:#080808;background-image:radial-gradient(ellipse at 8% 18%
   });
 })();
 </script>
+
+<script>
+/* Cronómetro de 17 minutos: mantém o mesmo prazo neste navegador, mesmo após recarregar. */
+(function(){
+  const clock=document.getElementById('offer-countdown');
+  const box=document.querySelector('.offer-countdown');
+  const message=document.getElementById('countdown-message');
+  if(!clock||!box||!message)return;
+  const storageKey='ebook_offer_deadline_v1';
+  let deadline;
+  try{
+    const saved=Number(localStorage.getItem(storageKey));
+    deadline=saved> Date.now()?saved:Date.now()+17*60*1000;
+    localStorage.setItem(storageKey,String(deadline));
+  }catch(error){
+    deadline=Date.now()+17*60*1000;
+  }
+  function updateCountdown(){
+    const remaining=Math.max(0,deadline-Date.now());
+    const minutes=Math.floor(remaining/60000);
+    const seconds=Math.floor((remaining%60000)/1000);
+    clock.textContent=String(minutes).padStart(2,'0')+':'+String(seconds).padStart(2,'0');
+    if(remaining<=0){
+      box.classList.add('is-expired');
+      message.textContent='Tempo esgotado. Contacte-nos para confirmar o preço promocional.';
+      clearInterval(interval);
+    }
+  }
+  updateCountdown();
+  const interval=setInterval(updateCountdown,1000);
+})();
+</script>
+
 </body></html>
