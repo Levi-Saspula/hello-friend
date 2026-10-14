@@ -787,3 +787,7 @@ a.guide-link[href^="https://wa.me/"]:hover,
 .pricebox .eyebrow,.pricebox .price-was,.pricebox .price,.pricebox .price-note,.pricebox .countdown-label,.pricebox .countdown-clock,.pricebox .countdown-footnote,.pricebox .small{color:#fff}
 .pricebox .price{font-size:clamp(28px,3vw,38px)}
 @media(max-width:760px){.pricebox{min-height:400px;padding:22px}.pricebox .price{font-size:32px}}
+
+
+/* Segunda frase do título com peso tipográfico mais leve */
+.hero h1 em{font-weight:500 !important;}
