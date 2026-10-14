@@ -885,12 +885,13 @@ a.guide-link[href^="https://wa.me/"]:hover,
 
 
 <style>
-/* Restaura a ilustração anterior do homem e da mulher no fundo do cabeçalho */
+/* Restaura a ilustração anterior do homem e da mulher no fundo do cabeçalho, a 2% de opacidade */
 .hero{
   background-color:#090909!important;
   background-image:
     linear-gradient(90deg,rgba(9,9,9,.98) 0%,rgba(9,9,9,.94) 42%,rgba(9,9,9,.78) 100%),
     url("https://images.unsplash.com/photo-1766260633461-3054d5244cb8?auto=format&fit=crop&w=1000&q=75")!important;
+  background-blend-mode:normal,normal!important;
   background-repeat:no-repeat,no-repeat!important;
   background-size:cover,360px auto!important;
   background-position:center,88% 52%!important;
@@ -901,6 +902,24 @@ a.guide-link[href^="https://wa.me/"]:hover,
     background-size:cover,230px auto!important;
     background-position:center,90% 24%!important;
   }
+}
+</style>
+
+
+<style>
+/* Opacidade de 2% apenas na ilustração, mantendo o gradiente escuro */
+.hero{
+  background-color:#090909!important;
+  background-image:
+    linear-gradient(90deg,rgba(9,9,9,.98) 0%,rgba(9,9,9,.94) 42%,rgba(9,9,9,.78) 100%),
+    linear-gradient(rgba(9,9,9,.98),rgba(9,9,9,.98)),
+    url("https://images.unsplash.com/photo-1766260633461-3054d5244cb8?auto=format&fit=crop&w=1000&q=75")!important;
+  background-repeat:no-repeat,no-repeat,no-repeat!important;
+  background-size:cover,360px auto,360px auto!important;
+  background-position:center,88% 52%,88% 52%!important;
+}
+@media(max-width:760px){
+  .hero{background-size:cover,230px auto,230px auto!important;background-position:center,90% 24%,90% 24%!important}
 }
 </style>
 
