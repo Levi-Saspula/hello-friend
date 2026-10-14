@@ -181,11 +181,37 @@ a.btn[href="#comprar"]{border-radius:999px}
     mask-image:radial-gradient(ellipse 80% 65% at 50% 50%,#000 20%,transparent 100%);
   }
 }
+
+/* Motion graphics subtis no fundo do hero; decorativos, sem imagens adicionais */
+.hero .ambient-motion{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.hero .ambient-motion span{position:absolute;display:block;will-change:transform}
+.hero .ambient-ring{width:clamp(240px,34vw,520px);aspect-ratio:1;border:1px solid rgba(229,9,45,.075);border-radius:50%;box-shadow:0 0 45px rgba(229,9,45,.018),inset 0 0 35px rgba(255,255,255,.008)}
+.hero .ambient-ring-one{top:-27%;left:-13%}
+.hero .ambient-ring-two{bottom:-42%;right:-12%;width:clamp(280px,42vw,620px);border-color:rgba(255,255,255,.045)}
+.hero .ambient-orb{width:clamp(130px,22vw,310px);aspect-ratio:1;border-radius:50%;filter:blur(55px);background:radial-gradient(circle,rgba(229,9,45,.055),transparent 70%)}
+.hero .ambient-orb-one{top:8%;right:2%}
+.hero .ambient-orb-two{bottom:-9%;left:15%;background:radial-gradient(circle,rgba(255,255,255,.025),transparent 70%)}
+.hero .ambient-line{height:1px;width:clamp(170px,30vw,430px);background:linear-gradient(90deg,transparent,rgba(229,9,45,.075),transparent);transform:rotate(-25deg)}
+.hero .ambient-line-one{top:28%;right:-9%}
+.hero .ambient-line-two{bottom:20%;left:-10%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.045),transparent)}
+.hero>.wrap{position:relative;z-index:2}
+@keyframes ambientDriftA{0%,100%{transform:translate3d(0,0,0) rotate(0deg)}50%{transform:translate3d(18px,24px,0) rotate(8deg)}}
+@keyframes ambientDriftB{0%,100%{transform:translate3d(0,0,0) rotate(0deg)}50%{transform:translate3d(-22px,-16px,0) rotate(-7deg)}}
+@keyframes ambientFloat{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(20px,-22px,0)}}
+@media(prefers-reduced-motion:no-preference){
+.hero .ambient-ring-one,.hero .ambient-line-one{animation:ambientDriftA 19s ease-in-out infinite}
+.hero .ambient-ring-two,.hero .ambient-line-two{animation:ambientDriftB 24s ease-in-out infinite}
+.hero .ambient-orb-one{animation:ambientFloat 15s ease-in-out infinite}
+.hero .ambient-orb-two{animation:ambientFloat 21s ease-in-out infinite reverse}
+}
+@media(max-width:760px){.hero .ambient-ring-one{left:-48%}.hero .ambient-ring-two{right:-60%}.hero .ambient-line{opacity:.65}}
+@media(prefers-reduced-motion:reduce){.hero .ambient-motion span{animation:none!important;will-change:auto}}
+
 </style>
 </head>
 <body>
 <div class="top"><div class="wrap">Guia editorial prático <span>·</span> 9 capítulos <span>·</span> 4 bónus</div></div>
-<header class="hero"><div class="wrap hero-grid"><div class="hero-copy"><div class="eyebrow">Mais clareza. Limites mais fortes.</div><h1><span class="hero-montserrat">Como lidar com</span> <em>Pessoas narcisistas</em></h1><p class="lead">Descubra como reconhecer comportamentos manipuladores, estabelecer limites e proteger a sua paz emocional — sem precisar de ganhar todas as discussões.</p><a class="btn buy-link" href="#comprar">QUERO CONHECER O GUIA</a><div class="small">Formato PDF · Para ler no telemóvel, tablet ou computador</div></div></div></header>
+<header class="hero"><div class="ambient-motion" aria-hidden="true"><span class="ambient-ring ambient-ring-one"></span><span class="ambient-ring ambient-ring-two"></span><span class="ambient-orb ambient-orb-one"></span><span class="ambient-orb ambient-orb-two"></span><span class="ambient-line ambient-line-one"></span><span class="ambient-line ambient-line-two"></span></div><div class="wrap hero-grid"><div class="hero-copy"><div class="eyebrow">Mais clareza. Limites mais fortes.</div><h1><span class="hero-montserrat">Como lidar com</span> <em>Pessoas narcisistas</em></h1><p class="lead">Descubra como reconhecer comportamentos manipuladores, estabelecer limites e proteger a sua paz emocional — sem precisar de ganhar todas as discussões.</p><a class="btn buy-link" href="#comprar">QUERO CONHECER O GUIA</a><div class="small">Formato PDF · Para ler no telemóvel, tablet ou computador</div></div></div></header>
 <div class="trust"><div class="wrap trust-grid"><div><strong>9 capítulos</strong>Organizados para aplicação prática</div><div><strong>4 bónus</strong>Materiais para consulta rápida</div><div><strong>PDF A4</strong>Leitura digital ou impressão</div></div></div>
 <section class="section"><div class="wrap"><div class="eyebrow">Talvez conheça esta sensação</div><h2>Começa uma conversa para resolver algo.<br>Termina a duvidar de si.</h2><p class="intro">O assunto muda, a responsabilidade parece inverter-se e, de repente, és tu quem está a justificar cada palavra. A discussão acaba, mas a dúvida e o desgaste continuam.</p><div class="pain-grid"><div class="tile"><h3>“Será que estou a exagerar?”</h3><p>Ficas a rever a conversa na cabeça, tentando perceber se a tua reação foi justa.</p></div><div class="tile"><h3>“Porque tenho de explicar tudo?”</h3><p>Um simples limite transforma-se numa longa defesa das tuas escolhas.</p></div><div class="tile"><h3>“Como é que isto virou culpa minha?”</h3><p>O problema inicial desaparece e acabas a responder a acusações que nem esperavas.</p></div><div class="tile"><h3>“Como posso responder sem piorar tudo?”</h3><p>Queres defender-te sem alimentar mais uma discussão interminável.</p></div></div><div class="quote">Não precisas de ganhar a discussão. Precisas de sair dela com a tua paz intacta.</div></div></section>
 <section class="section light"><div class="wrap"><div class="eyebrow">O que vais aprender</div><h2>Menos confusão. Mais clareza para agir.</h2><p class="intro">Um guia prático que te ajuda a observar comportamentos repetidos, responder com precisão e construir limites que existam na prática.</p><div class="learn-grid"><div class="tile"><div class="num">CAPÍTULO 01</div><h3>O Labirinto Mental</h3><p>Reconhecer conversas circulares e perceber quando o assunto está a ser desviado.</p></div><div class="tile"><div class="num">CAPÍTULO 02</div><h3>Conflito saudável vs. padrão manipulador</h3><p>Distinguir um desacordo normal de uma dinâmica repetida que merece atenção.</p></div><div class="tile"><div class="num">CAPÍTULO 03</div><h3>O Raio-X dos Padrões</h3><p>Observar comportamentos concretos em vez de depender apenas de impressões.</p></div><div class="tile"><div class="num">CAPÍTULO 04</div><h3>O vício da justificativa</h3><p>Deixar de transformar cada decisão numa defesa interminável.</p></div><div class="tile"><div class="num">CAPÍTULO 05</div><h3>Responder sem alimentar o fogo</h3><p>Usar respostas curtas, claras e firmes em conversas difíceis.</p></div><div class="tile"><div class="num">CAPÍTULO 06</div><h3>A fórmula do limite inabalável</h3><p>Definir limites com consequências realistas e consistentes.</p></div><div class="tile"><div class="num">CAPÍTULO 07</div><h3>O teste do limite</h3><p>Lidar com zombarias, insistência e tentativas de fazer-te recuar.</p></div><div class="tile"><div class="num">CAPÍTULO 08</div><h3>O semáforo da relação</h3><p>Refletir sobre a dinâmica da relação e avaliar os próximos passos.</p></div><div class="tile"><div class="num">CAPÍTULO 09</div><h3>Recuperando a autonomia</h3><p>Voltar a centrar as tuas decisões, necessidades e vida pessoal.</p></div></div></div></section>
