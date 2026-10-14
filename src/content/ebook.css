@@ -803,3 +803,16 @@ a.guide-link[href^="https://wa.me/"]:hover,
 }
 @media(max-width:760px){.hero h1 em{font-size:.76em !important;}}
 @media(max-width:380px){.hero h1 em{font-size:.72em !important;}}
+
+
+/* Frase 1: tamanho a 68% e sempre numa única linha */
+.hero h1 .hero-montserrat{
+  display:block!important;
+  width:max-content;
+  max-width:none!important;
+  max-width:100%;
+  font-size:.68em!important;
+  white-space:nowrap!important;
+  overflow-wrap:normal!important;
+  word-break:keep-all!important;
+}
