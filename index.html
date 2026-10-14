@@ -335,6 +335,33 @@ h1,h2,h3,h4,h5,h6,
 @media(max-width:480px){
   .top{font-size:8px;letter-spacing:.065em;padding:6px 0}
 }
+
+/* ELEMENTOS GRÁFICOS AMBIENTAIS EM TODOS OS FUNDOS */
+:root{--graphic-red:rgba(229,9,45,.16);--graphic-white:rgba(255,255,255,.055)}
+body{background-color:#080808;background-image:radial-gradient(ellipse at 8% 18%,rgba(229,9,45,.07),transparent 28%),radial-gradient(ellipse at 92% 52%,rgba(255,255,255,.025),transparent 25%)}
+.top{position:relative;isolation:isolate;overflow:hidden}
+.top:after{content:"";position:absolute;right:5%;top:0;width:160px;height:100%;opacity:.24;pointer-events:none;background:repeating-linear-gradient(135deg,transparent 0 9px,rgba(255,255,255,.32) 9px 10px);mask-image:linear-gradient(90deg,transparent,#000)}
+.hero{background-image:radial-gradient(circle at 12% 25%,rgba(229,9,45,.13),transparent 25%),radial-gradient(circle at 88% 78%,rgba(255,255,255,.055),transparent 22%),linear-gradient(135deg,#090909,#0d0b0c 55%,#090909)}
+.trust{position:relative;isolation:isolate;overflow:hidden;background-image:radial-gradient(circle at 8% 50%,rgba(229,9,45,.07),transparent 23%),linear-gradient(110deg,#f7f7f7,#ededed 52%,#fafafa)}
+.section{position:relative;isolation:isolate;overflow:hidden;background-color:#090909;background-image:radial-gradient(ellipse at 0% 15%,rgba(229,9,45,.075),transparent 32%),radial-gradient(ellipse at 100% 85%,rgba(255,255,255,.035),transparent 27%),linear-gradient(145deg,transparent 0 70%,rgba(229,9,45,.025) 70% 70.2%,transparent 70.2%)}
+.section.light{background-color:#f4f4f4;background-image:radial-gradient(ellipse at 0% 0%,rgba(229,9,45,.075),transparent 28%),radial-gradient(ellipse at 100% 100%,rgba(0,0,0,.045),transparent 30%),linear-gradient(135deg,transparent 0 74%,rgba(229,9,45,.045) 74% 74.15%,transparent 74.15%)}
+.section:before,.final:before,.footer:before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;opacity:.42;background-image:radial-gradient(circle,rgba(255,255,255,.22) 1px,transparent 1.5px);background-size:28px 28px;mask-image:linear-gradient(135deg,#000,transparent 42%,transparent 65%,#000)}
+.section.light:before{background-image:radial-gradient(circle,rgba(0,0,0,.18) 1px,transparent 1.5px);opacity:.18}
+.section>.wrap,.final>.wrap,.footer>.wrap{position:relative;z-index:1}
+.pain-grid,.learn-grid,.bonus-grid{position:relative}
+.tile,.bonus,.offer,.pricebox{position:relative;overflow:hidden}
+.tile:before,.bonus:before{content:"";position:absolute;top:0;right:0;width:66px;height:66px;border-top:1px solid rgba(229,9,45,.5);border-right:1px solid rgba(229,9,45,.5);pointer-events:none}
+.tile:after,.bonus:after{content:"";position:absolute;bottom:12px;left:12px;width:18px;height:2px;background:#e5092d;opacity:.75;pointer-events:none}
+.quote{position:relative}
+.quote:after{content:"";display:block;width:54px;height:1px;background:rgba(229,9,45,.45);margin:18px auto 0}
+.offer{background-image:radial-gradient(ellipse at 100% 0%,rgba(229,9,45,.12),transparent 38%),linear-gradient(135deg,#151515,#0b0b0b)}
+.pricebox{background-image:radial-gradient(circle at 50% 0%,rgba(229,9,45,.13),transparent 55%),linear-gradient(#080808,#0d0d0d)}
+.final{position:relative;isolation:isolate;overflow:hidden;background-color:#e5092d;background-image:radial-gradient(circle at 10% 20%,rgba(0,0,0,.15),transparent 26%),radial-gradient(circle at 90% 80%,rgba(255,255,255,.15),transparent 30%),linear-gradient(120deg,transparent 0 48%,rgba(255,255,255,.07) 48% 48.2%,transparent 48.2%)}
+.final:before{opacity:.22;background-image:radial-gradient(circle,rgba(255,255,255,.7) 1px,transparent 1.5px)}
+.footer{position:relative;isolation:isolate;overflow:hidden;background-color:#070707;background-image:radial-gradient(ellipse at 50% 100%,rgba(229,9,45,.11),transparent 45%)}
+@media(max-width:760px){.top:after{right:2%;width:80px}.section:before,.final:before,.footer:before{background-size:22px 22px;opacity:.2}.tile:before,.bonus:before{width:42px;height:42px}}
+@media(prefers-reduced-motion:no-preference){.tile:before,.bonus:before{transition:width .25s,height .25s}.tile:hover:before,.bonus:hover:before{width:82px;height:82px}}
+
 </style>
 </head>
 <body>
