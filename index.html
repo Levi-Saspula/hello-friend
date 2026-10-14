@@ -150,33 +150,33 @@ a.btn[href="#comprar"]{border-radius:999px}
 }
 
 
-/* Imagem temática sobre máscaras, reflexão e manipulação emocional */
+/* Fotografia anterior da mulher ao fundo, subtil e fundida com o fundo preto */
 .hero{position:relative;isolation:isolate;background:#090909;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background-image:url("https://images.unsplash.com/photo-1719601272419-ef6c74384119?auto=format&fit=crop&fm=jpg&q=85&w=2400");background-position:center 42%;background-size:cover;background-repeat:no-repeat;opacity:.30;pointer-events:none}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background-image:url("https://images.pexels.com/photos/6382735/pexels-photo-6382735.jpeg");background-position:center 35%;background-size:cover;background-repeat:no-repeat;opacity:.30;pointer-events:none}
 .hero::after{z-index:0;pointer-events:none}
 .hero>.wrap{position:relative;z-index:1}
 @media(max-width:760px){.hero::before{background-position:center 30%}}
 
-/* Fotografia temática subtil, integrada no fundo preto e vermelho */
+/* Imagem anterior quase imperceptível, com bordas fundidas no fundo preto */
 .hero::before{
-  opacity:.12;
+  opacity:.03;
   background-size:cover;
-  background-position:center 42%;
-  transform:scale(.95);
+  background-position:center center;
+  transform:scale(.82);
   transform-origin:center center;
 }
-@media(max-width:760px){.hero::before{opacity:.09;transform:scale(.95);background-position:center 42%}}
+@media(max-width:760px){.hero::before{opacity:.02;transform:scale(.82);background-position:center center}}
 
-/* Fundir a imagem nos cantos para preservar a legibilidade do texto */
+/* Fundir a fotografia nos cantos para preservar a legibilidade do texto */
 .hero::before{
-  opacity:.12;
-  transform:scale(.95);
+  opacity:.03;
+  transform:scale(.82);
   -webkit-mask-image:radial-gradient(ellipse 65% 70% at 50% 50%,#000 25%,transparent 100%);
   mask-image:radial-gradient(ellipse 65% 70% at 50% 50%,#000 25%,transparent 100%);
 }
 @media(max-width:760px){
   .hero::before{
-    opacity:.09;
+    opacity:.02;
     -webkit-mask-image:radial-gradient(ellipse 80% 65% at 50% 50%,#000 20%,transparent 100%);
     mask-image:radial-gradient(ellipse 80% 65% at 50% 50%,#000 20%,transparent 100%);
   }
