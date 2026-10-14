@@ -675,6 +675,8 @@ a.guide-link:hover{
 
 
 
+<section class="section testimonials-section" id="depoimentos"><div class="wrap"><div class="eyebrow">Experiências de leitores</div><h2>O que dizem sobre o guia</h2><p class="intro">Esta área está preparada para receber opiniões reais de leitores que já conheceram o material.</p><div class="testimonial-grid"><article class="testimonial-card"><div class="testimonial-quote">“Adiciona aqui um depoimento real de um leitor.”</div><div class="testimonial-author">Depoimento a inserir</div></article><article class="testimonial-card"><div class="testimonial-quote">“Substitui este texto por uma opinião verdadeira, com autorização.”</div><div class="testimonial-author">Depoimento a inserir</div></article><article class="testimonial-card"><div class="testimonial-quote">“Podes incluir uma experiência concreta sobre a utilidade do guia.”</div><div class="testimonial-author">Depoimento a inserir</div></article></div></div></section>
+
 <section class="section" id="comprar"><div class="wrap"><div class="eyebrow">O próximo passo começa contigo</div><h2>Começa por recuperar a confiança na tua própria percepção.</h2><p class="intro">Recebe o ebook principal e os quatro bónus práticos num único conjunto digital.</p><div class="offer"><div><h3>O que está incluído</h3><ul><li>Ebook em PDF com 9 capítulos</li><li>25 frases prontas para situações difíceis</li><li>Manual prático para impor limites</li><li>Lista com mais de 50 sinais</li><li>Plano de distanciamento emocional e prático</li></ul></div><div class="pricebox"><div class="eyebrow">Acesso ao guia completo</div><div class="price-was">Antes: <s>17.500 Kz</s></div><div class="price">5.000 Kz</div><div class="price-note">Oferta por tempo limitado</div>
 <div class="offer-countdown" role="timer" aria-live="polite" aria-label="Tempo restante da oferta">
   <span class="countdown-label">Contagem reinicia em</span>
@@ -794,6 +796,16 @@ a.guide-link[href^="https://wa.me/"]:hover,
     width:calc((100% - 16px)/2);
   }
 }
+</style>
+
+<style>
+/* Depoimentos posicionados imediatamente antes da oferta/preço */
+.testimonials-section{background:linear-gradient(180deg,#141111,#101010)}
+.testimonial-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:30px}
+.testimonial-card{min-height:190px;padding:24px;background:linear-gradient(145deg,#211719,#171414);border:1px solid #423033;border-radius:14px;display:flex;flex-direction:column;justify-content:space-between;gap:22px}
+.testimonial-quote{font-size:15px;line-height:1.7;color:#e8ded8;font-style:italic}
+.testimonial-author{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#e38b91;border-top:1px solid #ffffff15;padding-top:14px}
+@media(max-width:760px){.testimonial-grid{grid-template-columns:1fr}.testimonial-card{min-height:0;padding:24px 20px}}
 </style>
 
 </body></html>
