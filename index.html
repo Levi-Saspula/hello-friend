@@ -393,6 +393,18 @@ body{background-color:#080808;background-image:radial-gradient(ellipse at 8% 18%
 .offer-countdown.is-expired{border-color:#555;background:#171717}
 .offer-countdown.is-expired .countdown-clock{color:#bbb;text-shadow:none}
 
+
+/* Depoimentos: prova social visual, posicionada antes da secção de adequação do guia */
+.testimonials{background-color:#0b0b0b;background-image:radial-gradient(ellipse at 50% 0%,rgba(229,9,45,.10),transparent 48%),linear-gradient(145deg,#0b0b0b,#111)}
+.testimonial-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;width:100%;margin-top:32px}
+.testimonial-card{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;min-height:220px;padding:28px 24px;background:linear-gradient(145deg,#171717,#0d0d0d);border:1px solid #383838;border-top:3px solid #e5092d}
+.testimonial-stars{color:#ff3655;font-size:15px;letter-spacing:.16em}
+.testimonial-card blockquote{margin:16px 0;color:#f1f1f1;font-size:15px;line-height:1.8;font-style:italic}
+.testimonial-author{margin:0;color:#fff;font-size:11px;font-weight:700;letter-spacing:.04em}
+.testimonial-kind{margin-top:6px;color:#ff7a8c;font-size:9px;text-transform:uppercase;letter-spacing:.12em}
+.testimonial-disclaimer{max-width:760px;margin:22px auto 0;color:#aaa;font-size:11px;line-height:1.7;text-align:center}
+@media(max-width:760px){.testimonial-grid{grid-template-columns:1fr}.testimonial-card{min-height:0;padding:24px 20px}}
+
 </style>
 </head>
 <body>
@@ -402,6 +414,20 @@ body{background-color:#080808;background-image:radial-gradient(ellipse at 8% 18%
 <section class="section"><div class="wrap"><div class="eyebrow">Talvez conheça esta sensação</div><h2>Começa uma conversa para resolver algo.<br>Termina a duvidar de si.</h2><p class="intro">O assunto muda, a responsabilidade parece inverter-se e, de repente, és tu quem está a justificar cada palavra. A discussão acaba, mas a dúvida e o desgaste continuam.</p><div class="pain-grid"><div class="tile"><h3>“Será que estou a exagerar?”</h3><p>Ficas a rever a conversa na cabeça, tentando perceber se a tua reação foi justa.</p></div><div class="tile"><h3>“Porque tenho de explicar tudo?”</h3><p>Um simples limite transforma-se numa longa defesa das tuas escolhas.</p></div><div class="tile"><h3>“Como é que isto virou culpa minha?”</h3><p>O problema inicial desaparece e acabas a responder a acusações que nem esperavas.</p></div><div class="tile"><h3>“Como posso responder sem piorar tudo?”</h3><p>Queres defender-te sem alimentar mais uma discussão interminável.</p></div></div><div class="quote">Não precisas de ganhar a discussão. Precisas de sair dela com a tua paz intacta.</div></div></section>
 
 <section class="section"><div class="wrap"><div class="eyebrow">Materiais extra incluídos</div><h2>Quatro bónus para consultar quando precisares.</h2><div class="bonus-grid"><div class="bonus"><div class="tag">Bónus 01</div><h3>25 Frases Prontas para Desarmar Manipulações</h3><p>Respostas curtas para situações de culpa, provocação, acusações e conversas que não avançam.</p></div><div class="bonus"><div class="tag">Bónus 02</div><h3>Manual Prático para Impor Limites</h3><p>Um roteiro em sete passos para definir, comunicar e manter limites consistentes.</p></div><div class="bonus"><div class="tag">Bónus 03</div><h3>Mais de 50 Sinais de Padrões Manipuladores</h3><p>Uma lista organizada de comportamentos para observar padrões recorrentes com mais clareza.</p></div><div class="bonus"><div class="tag">Bónus 04</div><h3>Plano de Distanciamento Emocional e Prático</h3><p>Um plano por fases para pensar no afastamento com organização, apoio e atenção à segurança.</p></div></div></div></section>
+
+<section class="section testimonials" id="depoimentos"><div class="wrap">
+  <div class="eyebrow">Experiências de leitura</div>
+  <h2>Palavras que podem inspirar uma mudança.</h2>
+  <p class="intro">Exemplos de como um leitor pode descrever o valor prático do guia.</p>
+  <div class="testimonial-grid">
+    <article class="testimonial-card"><div class="testimonial-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>“Ajudou-me a organizar as ideias e a perceber a importância de estabelecer limites com mais clareza.”</blockquote><p class="testimonial-author">[Inserir nome ou iniciais do leitor]</p><span class="testimonial-kind">Exemplo ilustrativo</span></article>
+    <article class="testimonial-card"><div class="testimonial-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>“Gostei das frases práticas. Dão-me um ponto de partida para responder com mais calma em conversas difíceis.”</blockquote><p class="testimonial-author">[Inserir nome ou iniciais do leitor]</p><span class="testimonial-kind">Exemplo ilustrativo</span></article>
+    <article class="testimonial-card"><div class="testimonial-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>“O conteúdo é fácil de acompanhar e ajuda a refletir sobre padrões de comportamento sem tirar conclusões precipitadas.”</blockquote><p class="testimonial-author">[Inserir nome ou iniciais do leitor]</p><span class="testimonial-kind">Exemplo ilustrativo</span></article>
+    <article class="testimonial-card"><div class="testimonial-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>“Os exercícios e as orientações sobre limites tornam o tema mais claro e fácil de aplicar no dia a dia.”</blockquote><p class="testimonial-author">[Inserir nome ou iniciais do leitor]</p><span class="testimonial-kind">Exemplo ilustrativo</span></article>
+  </div>
+  <p class="testimonial-disclaimer">Nota: estes textos são exemplos ilustrativos, não testemunhos reais. Substitui-os por opiniões autênticas, com autorização dos leitores, antes de apresentar esta secção como prova social.</p>
+</div></section>
+
 <section class="section light"><div class="wrap"><h2>Este guia pode ser útil para ti se…</h2><div class="pain-grid"><div class="tile"><h3>Queres compreender melhor uma relação</h3><p>Seja amorosa, familiar, de amizade ou profissional, quando certos padrões se repetem.</p></div><div class="tile"><h3>Tens dificuldade em dizer “não”</h3><p>E sentes culpa ou pressão quando tentas proteger o teu tempo e as tuas decisões.</p></div><div class="tile"><h3>Queres comunicar com mais firmeza</h3><p>Sem insultar, ameaçar ou tentar vencer todas as discussões.</p></div><div class="tile"><h3>Estás pronto para observar padrões</h3><p>Com mais atenção aos comportamentos e menos pressa em tirar conclusões.</p></div></div><p class="intro" style="margin-top:24px"><strong>Importante:</strong> o guia usa “narcisista” em sentido comportamental, não como diagnóstico clínico. Não promete mudar outra pessoa; oferece ferramentas para reconhecer padrões, definir limites e tomar decisões mais conscientes.</p></div></section>
 <section class="section" id="comprar"><div class="wrap"><div class="eyebrow">O próximo passo começa contigo</div><h2>Começa por recuperar a confiança na tua própria percepção.</h2><p class="intro">Recebe o ebook principal e os quatro bónus práticos num único conjunto digital.</p><div class="offer"><div><h3>O que está incluído</h3><ul><li>Ebook em PDF com 9 capítulos</li><li>25 frases prontas para situações difíceis</li><li>Manual prático para impor limites</li><li>Lista com mais de 50 sinais</li><li>Plano de distanciamento emocional e prático</li></ul></div><div class="pricebox"><div class="eyebrow">Acesso ao guia completo</div><div class="price-was">Antes: <s>17.500 Kz</s></div><div class="price">5.000 Kz</div><div class="price-note">Oferta por tempo limitado</div>
 <div class="offer-countdown" role="timer" aria-live="polite" aria-label="Tempo restante da oferta">
