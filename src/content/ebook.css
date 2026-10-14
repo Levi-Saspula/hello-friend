@@ -791,3 +791,15 @@ a.guide-link[href^="https://wa.me/"]:hover,
 
 /* Segunda frase do título com peso tipográfico mais leve */
 .hero h1 em{font-weight:500 !important;}
+
+
+/* Reduzir a segunda frase para caber inteira numa só linha */
+.hero h1 em{
+  display:inline-block !important;
+  white-space:nowrap !important;
+  font-size:.78em !important;
+  font-weight:500 !important;
+  line-height:1.12;
+}
+@media(max-width:760px){.hero h1 em{font-size:.76em !important;}}
+@media(max-width:380px){.hero h1 em{font-size:.72em !important;}}
