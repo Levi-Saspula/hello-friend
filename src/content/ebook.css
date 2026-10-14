@@ -726,3 +726,15 @@ a.guide-link[href^="https://wa.me/"]:hover,
 .offer-cover { display:block; width:min(100%, 290px); height:auto; aspect-ratio:2 / 3; object-fit:contain; margin:0 auto 28px; }
 .offer > div:first-child { min-width:0; }
 @media(max-width:760px) { .offer-cover { width:min(100%,240px); } .pricebox { min-width:0; width:100%; } .pricebox .price { font-size:32px; white-space:normal; } }
+
+
+/* Capa real do ebook: destaque no hero e imagem otimizada na oferta */
+.hero .book-stage{display:flex;align-items:center;justify-content:center;width:100%;min-height:0;perspective:none;position:relative}
+.hero .book-stage:before{content:"";position:absolute;width:min(360px,75vw);aspect-ratio:1;border-radius:50%;background:#e5092d;filter:blur(85px);opacity:.18;pointer-events:none}
+.hero .hero-cover{position:relative;z-index:1;display:block;width:clamp(190px,24vw,290px);height:auto;max-height:440px;object-fit:contain;object-position:center;border:1px solid #ffffff26;box-shadow:18px 22px 0 #e5092d,28px 34px 50px #000b;transform:rotate(1.5deg);border-radius:2px}
+.offer .offer-cover{display:block;width:min(100%,280px);height:auto;max-height:440px;object-fit:contain;object-position:center;margin:0 auto 28px;border:1px solid #ffffff25;box-shadow:12px 16px 34px #0008}
+@media(max-width:760px){
+ .hero .book-stage{order:0;width:100%;margin:8px auto 0}
+ .hero .hero-cover{width:min(64vw,235px);max-height:350px;box-shadow:12px 15px 0 #e5092d,20px 25px 38px #000b}
+ .offer .offer-cover{width:min(72%,240px);max-height:380px}
+}
