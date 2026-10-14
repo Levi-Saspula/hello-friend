@@ -883,4 +883,25 @@ a.guide-link[href^="https://wa.me/"]:hover,
 </style>
 
 
+
+<style>
+/* Restaura a ilustração anterior do homem e da mulher no fundo do cabeçalho */
+.hero{
+  background-color:#090909!important;
+  background-image:
+    linear-gradient(90deg,rgba(9,9,9,.98) 0%,rgba(9,9,9,.94) 42%,rgba(9,9,9,.78) 100%),
+    url("https://images.unsplash.com/photo-1766260633461-3054d5244cb8?auto=format&fit=crop&w=1000&q=75")!important;
+  background-repeat:no-repeat,no-repeat!important;
+  background-size:cover,360px auto!important;
+  background-position:center,88% 52%!important;
+}
+.hero::before{background-image:none!important;opacity:0!important}
+@media(max-width:760px){
+  .hero{
+    background-size:cover,230px auto!important;
+    background-position:center,90% 24%!important;
+  }
+}
+</style>
+
 </body></html>
