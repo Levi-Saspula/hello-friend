@@ -405,6 +405,61 @@ body{background-color:#080808;background-image:radial-gradient(ellipse at 8% 18%
 .testimonial-disclaimer{max-width:760px;margin:22px auto 0;color:#aaa;font-size:11px;line-height:1.7;text-align:center}
 @media(max-width:760px){.testimonial-grid{grid-template-columns:1fr}.testimonial-card{min-height:0;padding:24px 20px}}
 
+
+/* Glassmorphism subtil nos restantes elementos gráficos escuros */
+.tile:not(.light .tile),
+.bonus,
+.testimonial-card,
+.pricebox,
+.offer-countdown{
+  position:relative;
+  overflow:hidden;
+  background-image:linear-gradient(135deg,rgba(255,255,255,.075),rgba(255,255,255,.012) 52%,rgba(255,255,255,.035));
+  border-color:rgba(255,255,255,.13);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.10),0 10px 26px rgba(0,0,0,.16);
+  -webkit-backdrop-filter:blur(10px);
+  backdrop-filter:blur(10px);
+}
+.tile:not(.light .tile):hover,
+.bonus:hover,
+.testimonial-card:hover{
+  border-color:rgba(255,255,255,.22);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 12px 30px rgba(0,0,0,.22),0 0 18px rgba(229,9,45,.07);
+}
+.bonus{
+  background-color:#171112;
+  background-image:linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.015) 52%,rgba(229,9,45,.045));
+}
+.testimonial-card{
+  background-color:#0d0d0d;
+  background-image:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.012) 58%,rgba(229,9,45,.035));
+}
+.pricebox{
+  background-color:#0f0d0d;
+  background-image:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.012) 58%,rgba(229,9,45,.055));
+  border-color:rgba(229,9,45,.28);
+}
+.offer-countdown{
+  background-color:#111;
+  background-image:linear-gradient(135deg,rgba(229,9,45,.13),rgba(255,255,255,.035) 50%,rgba(0,0,0,.2));
+  border-color:rgba(229,9,45,.42);
+}
+.offer{
+  background-image:linear-gradient(135deg,rgba(255,255,255,.055),rgba(255,255,255,.008) 48%,rgba(229,9,45,.045)),linear-gradient(135deg,#271417,#151112);
+  border-color:rgba(229,9,45,.32);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 14px 34px rgba(0,0,0,.16);
+}
+.eyebrow{
+  display:inline-block;
+  padding:8px 12px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:999px;
+  background:linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.015));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12);
+  -webkit-backdrop-filter:blur(8px);
+  backdrop-filter:blur(8px);
+}
+
 </style>
 
 <style>
