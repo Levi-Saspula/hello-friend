@@ -677,7 +677,7 @@ a.guide-link:hover{
 
 <section class="section" id="comprar"><div class="wrap"><div class="eyebrow">O próximo passo começa contigo</div><h2>Começa por recuperar a confiança na tua própria percepção.</h2><p class="intro">Recebe o ebook principal e os quatro bónus práticos num único conjunto digital.</p><div class="offer"><div><h3>O que está incluído</h3><ul><li>Ebook em PDF com 9 capítulos</li><li>25 frases prontas para situações difíceis</li><li>Manual prático para impor limites</li><li>Lista com mais de 50 sinais</li><li>Plano de distanciamento emocional e prático</li></ul></div><div class="pricebox"><div class="eyebrow">Acesso ao guia completo</div><div class="price-was">Antes: <s>17.500 Kz</s></div><div class="price">5.000 Kz</div><div class="price-note">Oferta por tempo limitado</div>
 <div class="offer-countdown" role="timer" aria-live="polite" aria-label="Tempo restante da oferta">
-  <span class="countdown-label">Esta oferta termina em</span>
+  <span class="countdown-label">Contagem reinicia em</span>
   <span class="countdown-clock" id="offer-countdown">17:00</span>
   <span class="countdown-footnote" id="countdown-message">Aproveita enquanto está disponível.</span>
 </div><a class="btn buy-link guide-link" href="https://wa.me/244000000000?text=Ol%C3%A1%2C%20quero%20saber%20como%20comprar%20o%20ebook%20Como%20Lidar%20com%20Pessoas%20Narcisistas" target="_blank" rel="noopener">QUERO O MEU EBOOK ↗</a><div class="small">Entrega do ebook via WhatsApp após confirmação do pagamento.</div></div></div></div></section>
@@ -731,34 +731,37 @@ a.guide-link:hover{
 </script>
 
 <script>
-/* Cronómetro de 17 minutos: mantém o mesmo prazo neste navegador, mesmo após recarregar. */
+/* Cronómetro em ciclo: reinicia automaticamente a cada 17 minutos. */
 (function(){
   const clock=document.getElementById('offer-countdown');
   const box=document.querySelector('.offer-countdown');
   const message=document.getElementById('countdown-message');
   if(!clock||!box||!message)return;
   const storageKey='ebook_offer_deadline_v1';
+  const cycle=17*60*1000;
   let deadline;
   try{
     const saved=Number(localStorage.getItem(storageKey));
-    deadline=saved> Date.now()?saved:Date.now()+17*60*1000;
+    deadline=saved>Date.now()?saved:Date.now()+cycle;
     localStorage.setItem(storageKey,String(deadline));
   }catch(error){
-    deadline=Date.now()+17*60*1000;
+    deadline=Date.now()+cycle;
   }
   function updateCountdown(){
-    const remaining=Math.max(0,deadline-Date.now());
+    let remaining=deadline-Date.now();
+    if(remaining<=0){
+      deadline=Date.now()+cycle;
+      remaining=cycle;
+      box.classList.remove('is-expired');
+      message.textContent='A contagem reinicia automaticamente.';
+      try{localStorage.setItem(storageKey,String(deadline));}catch(error){}
+    }
     const minutes=Math.floor(remaining/60000);
     const seconds=Math.floor((remaining%60000)/1000);
     clock.textContent=String(minutes).padStart(2,'0')+':'+String(seconds).padStart(2,'0');
-    if(remaining<=0){
-      box.classList.add('is-expired');
-      message.textContent='Tempo esgotado. Contacte-nos para confirmar o preço promocional.';
-      clearInterval(interval);
-    }
   }
   updateCountdown();
-  const interval=setInterval(updateCountdown,1000);
+  setInterval(updateCountdown,1000);
 })();
 </script>
 
