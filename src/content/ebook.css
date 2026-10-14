@@ -777,3 +777,13 @@ a.guide-link[href^="https://wa.me/"]:hover,
 @media(max-width:380px){
   .hero h1{font-size:clamp(18px,5.8vw,22px)}
 }
+
+
+/* A capa ocupa todo o painel do preço, com conteúdo legível por cima */
+.pricebox{position:relative;isolation:isolate;overflow:hidden;min-height:420px;display:flex;flex-direction:column;justify-content:center;align-items:stretch;background:#0b0b0b;padding:28px;border-radius:12px}
+.pricebox .pricebox-cover-bg{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.pricebox:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.62),rgba(0,0,0,.78));pointer-events:none}
+.pricebox .pricebox-content{position:relative;z-index:1;width:100%;text-shadow:0 2px 12px #000}
+.pricebox .eyebrow,.pricebox .price-was,.pricebox .price,.pricebox .price-note,.pricebox .countdown-label,.pricebox .countdown-clock,.pricebox .countdown-footnote,.pricebox .small{color:#fff}
+.pricebox .price{font-size:clamp(28px,3vw,38px)}
+@media(max-width:760px){.pricebox{min-height:400px;padding:22px}.pricebox .price{font-size:32px}}
