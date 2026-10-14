@@ -240,8 +240,8 @@ a.btn[href="#comprar"]{border-radius:999px}
 
 /* Brilho da frase 3: faixa mais larga, suave e visível, com movimento contínuo */
 @keyframes phrase3SoftShine{
-  0%,10%{background-position:130% center}
-  65%,100%{background-position:-130% center}
+  from{background-position:130% center}
+  to{background-position:-130% center}
 }
 @media(prefers-reduced-motion:no-preference){
   .hero h1 em{
@@ -252,7 +252,7 @@ a.btn[href="#comprar"]{border-radius:999px}
     -webkit-background-clip:text;
     background-clip:text;
     -webkit-text-fill-color:transparent;
-    animation:phrase3SoftShine 7s ease-in-out infinite;
+    animation:phrase3SoftShine 6s linear infinite;
   }
 }
 
