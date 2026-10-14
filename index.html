@@ -783,4 +783,17 @@ a.guide-link[href^="https://wa.me/"]:hover,
 }
 </style>
 
+
+
+<style>
+/* No computador, centraliza o terceiro balão da secção "Talvez conheças esta sensação". */
+@media(min-width:761px){
+  .pain-grid > .tile:last-child{
+    grid-column:1 / -1;
+    justify-self:center;
+    width:calc((100% - 16px)/2);
+  }
+}
+</style>
+
 </body></html>
