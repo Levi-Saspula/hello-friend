@@ -759,7 +759,7 @@ a.guide-link:hover{
       deadline=Date.now()+cycle;
       remaining=cycle;
       box.classList.remove('is-expired');
-      message.textContent='A contagem reinicia automaticamente.';
+      message.textContent='Adquira já o seu.';
       try{localStorage.setItem(storageKey,String(deadline));}catch(error){}
     }
     const minutes=Math.floor(remaining/60000);
