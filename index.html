@@ -681,6 +681,17 @@ a.guide-link:hover{
   .hero h1 .hero-montserrat{font-size:clamp(20px,5.4vw,42px);white-space:nowrap}
 }
 </style>
+<style>
+/* Frase 3 inteira numa linha, ajustada à largura do ecrã */
+.hero h1 em{
+  display:block;
+  white-space:nowrap;
+  font-size:clamp(23px,4.8vw,68px);
+}
+@media(max-width:760px){
+  .hero h1 em{font-size:clamp(20px,5.3vw,40px)}
+}
+</style>
 </head>
 <body>
 <div class="top"><div class="wrap">Guia editorial prático <span>·</span> 9 capítulos <span>·</span> 4 bónus</div></div>
