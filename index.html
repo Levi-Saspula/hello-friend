@@ -226,6 +226,17 @@ a.btn[href="#comprar"]{border-radius:999px}
 .faq summary{cursor:pointer}
 @media(prefers-reduced-motion:reduce){.js-motion .reveal-on-scroll{opacity:1!important;transform:none!important;transition:none!important}.tile,.bonus,.btn{transition:none!important}}
 
+
+/* Tipografia da frase 1 aplicada aos demais títulos, mantendo a hierarquia de tamanhos */
+.section h2,.section h3,.final h2,.offer h2,.offer h3,.faq h2,.faq h3{
+  font-family:"Montserrat",Arial,sans-serif;
+  font-weight:700;
+  font-style:normal;
+  text-transform:none;
+  letter-spacing:.005em;
+}
+/* A frase 3 mantém Playfair Display Italic como definido anteriormente */
+.hero h1 em{font-family:"Playfair Display",Georgia,serif;font-weight:400;font-style:italic}
 </style>
 </head>
 <body>
