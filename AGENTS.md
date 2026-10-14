@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- The home route renders the existing ebook document from src/content with its stylesheet; preserve that content when changing the offer so the imported page remains intact.

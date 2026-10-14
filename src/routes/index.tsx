@@ -1,24 +1,50 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
+import cover from "@/assets/capa-ebook.png.asset.json";
+import ebookHtml from "@/content/ebook.html?raw";
+import ebookCss from "@/content/ebook.css?url";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Como Lidar com Pessoas Narcisistas — Guia Prático" },
+      { name: "description", content: "Um guia prático para reconhecer padrões manipuladores, estabelecer limites e proteger a sua paz emocional." },
+      { property: "og:title", content: "Como Lidar com Pessoas Narcisistas — Guia Prático" },
+      { property: "og:description", content: "Conheça o ebook e os quatro bónus para estabelecer limites e proteger a sua paz emocional." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [
+      { rel: "stylesheet", href: ebookCss },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
+  useEffect(() => {
+    const cycle = 17 * 60 * 1000;
+    const storageKey = "ebook_offer_deadline_v1";
+    let deadline = Date.now() + cycle;
+    try {
+      const saved = Number(localStorage.getItem(storageKey));
+      if (saved > Date.now()) deadline = saved;
+      localStorage.setItem(storageKey, String(deadline));
+    } catch { /* Storage may be unavailable. */ }
+    const update = () => {
+      let remaining = deadline - Date.now();
+      if (remaining <= 0) {
+        deadline = Date.now() + cycle;
+        remaining = cycle;
+        try { localStorage.setItem(storageKey, String(deadline)); } catch { /* Optional storage. */ }
+      }
+      const clock = document.getElementById("offer-countdown");
+      if (clock) clock.textContent = `${String(Math.floor(remaining / 60000)).padStart(2, "0")}:${String(Math.floor((remaining % 60000) / 1000)).padStart(2, "0")}`;
+    };
+    update();
+    const timer = window.setInterval(update, 1000);
+    return () => window.clearInterval(timer);
+  }, []);
+  return <main dangerouslySetInnerHTML={{ __html: ebookHtml.replace("__EBOOK_COVER__", cover.url) }} />;
 }
