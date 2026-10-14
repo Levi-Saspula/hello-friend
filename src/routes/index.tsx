@@ -46,5 +46,5 @@ function Index() {
     const timer = window.setInterval(update, 1000);
     return () => window.clearInterval(timer);
   }, []);
-  return <main dangerouslySetInnerHTML={{ __html: ebookHtml.replace("__EBOOK_COVER__", cover.url) }} />;
+  return <main dangerouslySetInnerHTML={{ __html: ebookHtml.replaceAll("__EBOOK_COVER__", cover.url) }} />;
 }
