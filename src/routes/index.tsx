@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import cover from "@/assets/capa-ebook.png.asset.json";
+import offerCover from "@/assets/capa-ebook-nova.webp.asset.json";
 import ebookHtml from "@/content/ebook.html?raw";
 import ebookCss from "@/content/ebook.css?url";
 
@@ -46,5 +47,5 @@ function Index() {
     const timer = window.setInterval(update, 1000);
     return () => window.clearInterval(timer);
   }, []);
-  return <main dangerouslySetInnerHTML={{ __html: ebookHtml.replaceAll("__EBOOK_COVER__", cover.url) }} />;
+  return <main dangerouslySetInnerHTML={{ __html: ebookHtml.replaceAll("__EBOOK_OFFER_COVER__", offerCover.url).replaceAll("__EBOOK_COVER__", cover.url) }} />;
 }
