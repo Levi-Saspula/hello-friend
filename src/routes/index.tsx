@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import cover from "@/assets/capa-ebook.png.asset.json";
+import portraitOne from "@/assets/leitor-1.jpg.asset.json";
+import portraitTwo from "@/assets/leitor-2.jpg.asset.json";
+import portraitThree from "@/assets/leitor-3.jpg.asset.json";
 import ebookHtml from "@/content/ebook.html?raw";
 import ebookCss from "@/content/ebook.css?url";
 
@@ -16,7 +19,6 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "stylesheet", href: ebookCss },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" },
     ],
   }),
   component: Index,
@@ -46,5 +48,9 @@ function Index() {
     const timer = window.setInterval(update, 1000);
     return () => window.clearInterval(timer);
   }, []);
-  return <main dangerouslySetInnerHTML={{ __html: ebookHtml.replaceAll("__EBOOK_COVER__", cover.url) }} />;
+  const html = ebookHtml.replaceAll("__EBOOK_COVER__", cover.url)
+    .replaceAll("__PORTRAIT_ONE__", portraitOne.url)
+    .replaceAll("__PORTRAIT_TWO__", portraitTwo.url)
+    .replaceAll("__PORTRAIT_THREE__", portraitThree.url);
+  return <main className="sales-page" dangerouslySetInnerHTML={{ __html: html }} />;
 }
