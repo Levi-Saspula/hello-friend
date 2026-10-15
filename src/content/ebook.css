@@ -830,5 +830,5 @@ a.guide-link[href^="https://wa.me/"]:hover,
 
 
 /* Capa real no fundo da caixa de preço: leitura do preço e do botão sem concorrência */
-.pricebox .pricebox-cover-bg{filter:blur(3px) saturate(.85);transform:scale(1.06)}
-.pricebox:before{background:linear-gradient(180deg,rgba(0,0,0,.72),rgba(0,0,0,.88))}
+.pricebox .pricebox-cover-bg{filter:blur(8px) saturate(.7);transform:scale(1.12);opacity:.5}
+.pricebox:before{background:linear-gradient(180deg,rgba(0,0,0,.8),rgba(0,0,0,.93))}
