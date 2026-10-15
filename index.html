@@ -991,4 +991,21 @@ a.guide-link[href^="https://wa.me/"]:hover,
 .offer .offer-cover img{display:block;width:100%;height:auto;aspect-ratio:2/3;object-fit:cover;border-radius:8px;box-shadow:0 15px 35px rgba(0,0,0,.5),0 0 16px rgba(229,9,45,.16)}
 .offer .offer-inclusions,.offer .offer-inclusions h3{text-align:left}
 @media(max-width:760px){.offer .offer-details{grid-template-columns:1fr;justify-items:center;gap:18px}.offer .offer-cover{max-width:210px}.offer .offer-inclusions,.offer .offer-inclusions h3{text-align:left}}
-</style></body></html>
+</style>
+<style>
+/* Oferta: capa à esquerda e painel de preço à direita, alinhados na mesma linha */
+#comprar .offer{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:clamp(12px,3vw,36px)!important;align-items:center!important}
+#comprar .offer-details{display:flex!important;justify-content:center!important;align-items:center!important;min-width:0!important}
+#comprar .offer-cover{width:100%!important;max-width:340px!important;margin:0 auto!important}
+#comprar .pricebox{width:100%!important;min-width:0!important}
+@media(max-width:760px){
+ #comprar .offer{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;padding:clamp(10px,2.5vw,22px)!important;gap:10px!important}
+ #comprar .offer-cover{max-width:100%!important}
+ #comprar .pricebox{padding:clamp(8px,2vw,18px)!important}
+ #comprar .pricebox .btn{max-width:100%;padding:11px 5px;font-size:clamp(9px,2.5vw,13px);white-space:normal}
+ #comprar .pricebox .price{font-size:clamp(17px,4.4vw,28px)}
+ #comprar .pricebox .eyebrow{font-size:9px;letter-spacing:.05em}
+ #comprar .pricebox .small{font-size:10px}
+}
+</style>
+</body></html>
